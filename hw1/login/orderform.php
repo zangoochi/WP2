@@ -6,49 +6,38 @@
   $_SESSION['items']= $arr;
 
 -->
-
-
-<h3>Your Computer Order:</h3>
+<?php $price = 129.99;?>
+<h3>Your Order:</h3>
 <form method="post" action="">
 
-<div class="items">
-	<b>Memory</b>:
+<div class="item">
+	<div class="name">
+		<select name="item">
+  			<option value="Kingston HyperX Fury Red 8GB Desktop Memory Module Kit">Kingston HyperX Fury Red 8GB Desktop Memory Module Kit</option>
+  			<option value="Corsair Vengeance 8GB DDR3">Corsair Vengeance 8GB DDR3</option>
+  			<option value="ADATA XPG V1.0 16GB Desktop Memory - DDR3, (2 X 8GB)">ADATA XPG V1.0 16GB Desktop Memory - DDR3, (2 X 8GB)</option>
+  			<option value="MSI Z97">MSI Z97</option>
+  			<option value="ASUS Z97-DELUXE ATX">ASUS Z97-DELUXE ATX</option>
+  			<option value="MSI Z97-GAMING 5">MSI Z97-GAMING 5</option>
+		</select>
+	</div>
 
-	<?php 
-		require_once("orderformfn.php"); 
-		item("Kingston HyperX Fury Red 8GB Desktop Memory Module Kit", 109.99);
-		item("Corsair Vengeance 8GB DDR3", 179.00);
-		item("ADATA XPG V1.0 16GB Desktop Memory - DDR3, (2 X 8GB)", 149.99);
-	?>
-	
-	<b>Motherboards</b>:
-	
-	<?php 
-		require_once("orderformfn.php"); 
-		item("MSI Z97", 189.99);
-		item("ASUS Z97-DELUXE ATX", 399.99);
-		item("MSI Z97-GAMING 5", 159.99);
-	?>
+	<div class="price">
+		<input id="price" name="price" type="text" size="8" value="<?php echo $price;?>" hidden=""/><?php echo $price;?>
+	</div>
 
-	<b>Computer Cases:</b>
-	<?php 
-		require_once("orderformfn.php"); 
-		item("CC1", 78.26);
-		item("CC2", 100.00);
-		item("CC3", 299.99);
-	?>
-
-
-	<b>Hard Drives:</b>
-	<?php 
-		require_once("orderformfn.php"); 
-		item("HDD", 78.26);
-		item("HHD", 100.00);
-		item("SSD", 299.99);
-	?>
+	<div class="quantity">
+		<label for="quantity">Quantity:</label>
+   	 	<input type="number" name="quantity" id="quantity" min="0" step="1" max="1000" required="" value="1"/>
+	</div>
 
 </div>
-Subtotal: <?php echo $total ?>
+
+<?php 
+if($total != 0){
+	echo "Subtotal: $total"; 
+}
+?>
 
 <hr/>
 

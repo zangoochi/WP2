@@ -1,18 +1,23 @@
 <div class="aside">
+<div class="checkout">
 <?php
 	$total = $_SESSION["total"];
 	$items = $_SESSION['items'];
-    $mem = $_SESSION["memory"];
     echo '<p style="font-size: small">';
     $total = 0;
    	foreach($items as $item){
    		$total += ($item[1]*$item[2]);
-   		echo "<div style='font-size:medium'>Item: " . $item[0] . "</div><br>";
-      echo "<div class='att'>Quantity: " . $item[1] . "</div>";
-      echo "<br><div class='att'>Price: " . $item[2] . "</div>";
-      echo "<br><div class='att'>Total: ". ($item[1]*$item[2]) ."</div><br>";
+   		echo "<div>Item: " . $item[0] . "</div>";
+      echo "<pre>";
+          echo "<div class='att'>Quantity: " . $item[1] . "</div>";
+          echo "<div class='att'>Price: " . $item[2] . "</div>";
+          echo "<div class='att'>Total: ". ($item[1]*$item[2]) ."</div><br>";
    	}
-   	echo "<hr>Final: " . $total;
-   	echo '</p>';    
+    echo "</pre>";
+    echo "</div>";
+  
+    echo "<div class='total'><hr>Final: " . $total . "</div>";
+   	echo '</p>'; 
+      
 ?>
 </div>
