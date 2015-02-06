@@ -1,0 +1,17 @@
+div.items{
+	display:table;
+	border:solid 1px;
+}
+div.item{
+	display:table-row;
+}
+div.name, div.price, div.quantity{
+	display:table-cell;
+}
+div.submit{
+	text-align:center;
+}
+button#submit{
+	position:absolute;
+	top:50%;
+}
