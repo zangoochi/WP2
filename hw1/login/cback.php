@@ -1,4 +1,8 @@
 </article>
-<?php require_once("checkout.php");?>
+<?php 
+if(!empty($_SESSION['items'])){
+	require_once("checkout.php");
+}
+?>
 </section></div>
 </body></html>
