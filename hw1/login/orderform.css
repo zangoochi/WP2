@@ -5,10 +5,13 @@ div.items{
 div.item{
 	display:table-row;
 }
-div.name, div.price, div.quantity{
+div.name, div.quantity{
 	display:table-cell;
+	white-space: nowrap;
 }
 div.submit{
+	display:table;
+	width:100%;
 	text-align:center;
 }
 button#submit{
