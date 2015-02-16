@@ -1,5 +1,5 @@
 <h2>New Member Account</h2>
-<form method="post" action="">
+<form method="post" action="register.php">
 <div class="entry">
 <label for="uid">Userid:</label><span class="field"><input name="uid" required="" size="25" autofocus=""/> (5 or more charcters)</span>
 </div>

@@ -1,5 +1,5 @@
 <h2><?php echo $realm; ?> Login</h2>
-<form method="post" action="">
+<form method="post" action="login.php">
 <div class="entry">
 <label for="uid">Userid:</label><span class="field"><input name="uid" id="uid" required="" size="25" autofocus=""/></span>
 </div>

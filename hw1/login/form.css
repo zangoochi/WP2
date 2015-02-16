@@ -17,7 +17,7 @@ div.entry > input:hover,
 div.entry > input:focus,
 div.entry > span.field > input:hover,
 div.entry > span.field > input:focus
-{ background-color: #def; }
+{ background-color: #def;}
 
 div.entry > span.field { display: table-cell; }
 

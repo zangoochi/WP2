@@ -23,6 +23,26 @@ function http()
         exit;  // back to browser
     }
 }
+function temp_change_passwd(&$id,&$pass,&$file)
+{
+  $done=false;
+  $lines=file($file);
+  if ( $f=@fopen($file, "w") )
+  { foreach($lines as $line)
+    { if ( !$done && strstr($line, "$id:") )
+      { $pass_hash=crypt($pass, '$2a$09$dynamicwebdesign$');
+        preg_match("/(.*):/", $line, $matches);
+        $prefix = $matches[1];
+        $line="$prefix:" . $pass_hash . "\n";
+        $done=true;
+      }
+      fwrite($f, $line);
+    }
+    fclose($f);
+  }
+  else {  $err .= "Cannot open password file.";  }
+  return $done;
+} 
 
 function change_passwd(&$id,&$oldpass,&$pass,&$file,&$err)
 { if (! check_pass($id,$oldpass,$file)) // double check login

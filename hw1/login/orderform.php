@@ -1,5 +1,5 @@
 <h3>Your Order:</h3>
-<form method="post" action="">
+<form method="post" action="computershop.php">
 
 <div class="items">
 	<div class="item">

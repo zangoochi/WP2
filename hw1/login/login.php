@@ -8,11 +8,10 @@ if ( !empty($_POST['submit']) && $_POST['submit']=="Login"
 {// process login
    if ( check_pass($_POST['uid'],$_POST['pass'],$PASSWORD_FILE) )
    {// login success
-      echo '<script type="text/javascript">alert("HERE")</script>';
-
+      header("Location: " . $_SESSION['target']);
       $_SESSION['user']=$_POST['uid'];
       login_fn();
-      header("Location: " . $_SESSION['target']);
+
       exit;
    }
    else  
@@ -31,7 +30,7 @@ else // new login
    if ( !empty($_REQUEST['target']) )
    {  $_SESSION['target']=$_REQUEST['target']; }
    else
-   {  $_SESSION['target']='myprofile.php'; }
+   {  $_SESSION['target']='computershop.php'; }
    $title="Login"; 
    $css=array("basic.css", "form.css");
    require_once("rfront.php");

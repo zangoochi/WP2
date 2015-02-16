@@ -8,19 +8,14 @@ function loginLink()
 ?>
 <nav class="leftnavbar">
 <?php if($page == "main.php") {?>
-<span class="self">Main Page</span>
+<span class="self">About Us</span>
 <?php } else {?>
-<a href="main.php">Main Page</a><?php }?>
+<a href="main.php">About Us</a><?php }?>
 
-<?php if($page == "products.php") {?>
+<?php if($page == "computershop.php") {?>
 <span class="self">Products</span>
 <?php } else {?>
 <a href="computershop.php">Products</a><?php }?>
-
-<?php if($page == "memberarea.php") { ?>
-<span class="self">MemberArea</span>
-<?php } else {?>
-<a href="memberarea.php">MemberArea</a><?php }?>
 
 <?php if($page == "myprofile.php") { ?>
 <span class="self">MyProfile</span>

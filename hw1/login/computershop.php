@@ -8,11 +8,6 @@
 
   */
 
-if ( empty($_SESSION['user']) )
-{  header("Location: login.php?target=" . $_SERVER['PHP_SELF']);
-   exit;
-}
-
 $title = "Little Computer Shop";
 $css=array("basic.css", "form.css", "orderform.css");
 
