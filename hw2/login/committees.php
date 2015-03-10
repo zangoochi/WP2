@@ -1,0 +1,38 @@
+<?php  $committees = array("Advisory Committee for Academic Assessment"=>1,
+					  "All University Hearing Board"=>2, 
+					  "Citation and Recognition Committee"=>3, 
+					  "Faculty Professional Development Center Council"=>4,
+					  "Intercollegiate Athletics Committee"=>5,
+					  "Multidisciplinary Adisory Committee"=>6,
+					  "Professional Standars Committee"=>7,
+					  "Public Safety Advisory Committee"=>8,
+					  "Student Awards Committee"=>9,
+					  "Student Center Advisory Board"=>10,
+					  "Student Media Policy Committee"=>11,
+					  "Student Rights & Standards Committee"=>12,
+					  "Transportation Advisory Committee"=>13,
+					  "University Commencement Committee"=>14,
+					  "University Council on Teacher Education"=>15,
+					  "University Council on Technology"=>16,
+					  "Uniersity LIbraries Advisory Committee"=>17,
+					  "University Press Editorial Board"=>18,
+					  "University Requirements Curriculum Committee"=>19,
+					  "University Research Council"=>20,
+					  "University Scholarship Advisory Council"=>21,
+					  "University Teaching Council"=>22
+					  );   
+
+		$noncommittees = array("Committee on Administrative Officers"=>1,
+					  "Committee on Committees"=>2, 
+					  "Dean's Review Committee"=>3, 
+					  "Educational Policies Graduate Council"=>4,
+					  "Educational Policies Undergraduate Council"=>5,
+					  "Faculty Ethics Committee"=>6,
+					  "Faculty Senate"=>7,
+					  "Faculty Senate Budget Advisory Committee"=>8,
+					  "Joint Appeals Board"=>9,
+					  "Provost's Promotion Advisory Board"=>10,
+					  "Provost's Tenure Advisory Board"=>11,
+					  "Search Committee for Dean or Senior Administrator"=>12
+					  );  
+?>
