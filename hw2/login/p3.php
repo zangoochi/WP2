@@ -1,20 +1,3 @@
-<?php 
-
-function newCommittee($name, $number, $prefix){
-	echo '<tr>';
-	echo '<td>'.$name.'</td>';
-	echo '<td><input type="radio" name="'.$prefix.'i'.$number.'" value="VI"/></td>';
-	echo '<td><input type="radio" name="'.$prefix.'i'.$number.'" value="IN"/></td>';
-	echo '<td><input type="radio" name="'.$prefix.'i'.$number.'" value="NI" checked/></td>';
-	echo '<td><input type="radio" name="'.$prefix.'h'.$number.'" value="C"/></td>';
-	echo '<td><input type="radio" name="'.$prefix.'h'.$number.'" value="E"/></td>';
-	echo '<td><input type="radio" name="'.$prefix.'h'.$number.'" value="P"/></td>';
-	echo '<td><input type="radio" name="'.$prefix.'h'.$number.'" value="N" checked/></td>';
-	echo '</tr>';
-}
-
-?>
-
 <div class="title">3. Committee Preferences:</div>
 
 <p>
@@ -50,41 +33,87 @@ previously or are currently serving on one (but are not a continuing member for 
 		<th>Previous</th>
 		<th>Never</th>
 	</tr>
-
-	<?php require_once("committees.php");
-		foreach($committees as $name=>$value){
-			newCommittee($name, $value, "");
-		}
-	?>
-
-</table>
-
-<p class="left">
-Committees Not Nominated by the Committee on Committees:
-These committees are either nominated by the Faculty Senate Executive, or elected by the Faculty Senate, or by the faculty.
-</p>
-
-<table>
 	<tr>
-		<td></td>
-		<td class="right bold" colspan="3">Interest Level</td>
-		<td class="right bold" colspan="4">Membership History</td>
+		<td>Educational Policies Undergraduate Council</td>
+		<td><input type="radio" name="EPC_Int" value="VI"/></td>
+		<td><input type="radio" name="EPC_Int" value="IN"/></td>
+		<td><input type="radio" name="EPC_Int" value="NI" checked/></td>
+		<td><input type="radio" name="EPC_Mem" value="C"/></td>
+		<td><input type="radio" name="EPC_Mem" value="E"/></td>
+		<td><input type="radio" name="EPC_Mem" value="P"/></td>
+		<td><input type="radio" name="EPC_Mem" value="N" checked/></td>
 	</tr>
 	<tr>
-		<th>Committee</th>
-		<th>Very Interested</th>
-		<th>Interested</th>
-		<th>Not Interested</th>
-		<th>Continuing in 2015-2016</th>
-		<th>Expiring 2015-2016</th>
-		<th>Previous</th>
-		<th>Never</th>
+		<td>Faculty Professional Development Center Council</td>
+		<td><input type="radio" name="FPDC_Int" value="VI"/></td>
+		<td><input type="radio" name="FPDC_Int" value="IN"/></td>
+		<td><input type="radio" name="FPDC_Int" value="NI" checked/></td>
+		<td><input type="radio" name="FPDC_Mem" value="C"/></td>
+		<td><input type="radio" name="FPDC_Mem" value="E"/></td>
+		<td><input type="radio" name="FPDC_Mem" value="P"/></td>
+		<td><input type="radio" name="FPDC_Mem" value="N" checked/></td>
 	</tr>
-	<?php require_once("committees.php");
-		foreach($noncommittees as $name=>$value){
-			newCommittee($name, $value, "n");
-		}
-	?>
+	<tr>
+		<td>University Teaching Council</td>
+		<td><input type="radio" name="UTC_Int" value="VI"/></td>
+		<td><input type="radio" name="UTC_Int" value="IN"/></td>
+		<td><input type="radio" name="UTC_Int" value="NI" checked/></td>
+		<td><input type="radio" name="UTC_Mem" value="C"/></td>
+		<td><input type="radio" name="UTC_Mem" value="E"/></td>
+		<td><input type="radio" name="UTC_Mem" value="P"/></td>
+		<td><input type="radio" name="UTC_Mem" value="N" checked/></td>
+	</tr>
+	<tr>
+		<td>Committee on Administrative Officers</td>
+		<td><input type="radio" name="CAO_Int" value="VI"/></td>
+		<td><input type="radio" name="CAO_Int" value="IN"/></td>
+		<td><input type="radio" name="CAO_Int" value="NI" checked/></td>
+		<td><input type="radio" name="CAO_Mem" value="C"/></td>
+		<td><input type="radio" name="CAO_Mem" value="E"/></td>
+		<td><input type="radio" name="CAO_Mem" value="P"/></td>
+		<td><input type="radio" name="CAO_Mem" value="N" checked/></td>
+	</tr>
+	<tr>
+		<td>Committee on Committees</td>
+		<td><input type="radio" name="COC_Int" value="VI"/></td>
+		<td><input type="radio" name="COC_Int" value="IN"/></td>
+		<td><input type="radio" name="COC_Int" value="NI" checked/></td>
+		<td><input type="radio" name="COC_Mem" value="C"/></td>
+		<td><input type="radio" name="COC_Mem" value="E"/></td>
+		<td><input type="radio" name="COC_Mem" value="P"/></td>
+		<td><input type="radio" name="COC_Mem" value="N" checked/></td>
+	</tr>
+	<tr>
+		<td>Faculty Ethics Committee</td>
+		<td><input type="radio" name="FEC_Int" value="VI"/></td>
+		<td><input type="radio" name="FEC_Int" value="IN"/></td>
+		<td><input type="radio" name="FEC_Int" value="NI" checked/></td>
+		<td><input type="radio" name="FEC_Mem" value="C"/></td>
+		<td><input type="radio" name="FEC_Mem" value="E"/></td>
+		<td><input type="radio" name="FEC_Mem" value="P"/></td>
+		<td><input type="radio" name="FEC_Mem" value="N" checked/></td>
+
+	</tr>
+	<tr>
+		<td>Faculty Senate</td>
+		<td><input type="radio" name="FS_Int" value="VI"/></td>
+		<td><input type="radio" name="FS_Int" value="IN"/></td>
+		<td><input type="radio" name="FS_Int" value="NI" checked/></td>
+		<td><input type="radio" name="FS_Mem" value="C"/></td>
+		<td><input type="radio" name="FS_Mem" value="E"/></td>
+		<td><input type="radio" name="FS_Mem" value="P"/></td>
+		<td><input type="radio" name="FS_Mem" value="N" checked/></td>
+	</tr>
+	<tr>
+		<td>Intercollegiate Athletics Committee</td>
+		<td><input type="radio" name="IAC_Int" value="VI"/></td>
+		<td><input type="radio" name="IAC_Int" value="IN"/></td>
+		<td><input type="radio" name="IAC_Int" value="NI" checked/></td>
+		<td><input type="radio" name="IAC_Mem" value="C"/></td>
+		<td><input type="radio" name="IAC_Mem" value="E"/></td>
+		<td><input type="radio" name="IAC_Mem" value="P"/></td>
+		<td><input type="radio" name="IAC_Mem" value="N" checked/></td>
+	</tr>
 
 </table>
 

@@ -1,6 +1,8 @@
 <div class="title">1. Introduction</div>
 
 <p>
+</p>
+<p>
 Survey closes on May 5, 2015.
 </p>
 
@@ -42,58 +44,28 @@ College or Affiliation
 <div class="table">
 	<div class="row">
 		<div class="label">College of Arts & Sciences</div>
-		<div class="radio"><input type="radio" name="college" value="College of Arts & Sciences"/></div>
-	</div>
-	<div class="row">
-		<div class="label">College of Appl Eng, Sustainability & Technology</div>
-		<div class="radio"><input type="radio" name="college" value="College of Appl Eng, Sustainability & Technology"/></div>
-	</div>
-	<div class="row">
-		<div class="label">College of Architecture & Environmental Design</div>
-		<div class="radio"><input type="radio" name="college" value="College of Architecture & Environmental Design"/></div>
-	</div>
-	<div class="row">
-		<div class="label">College of the Arts</div>
-		<div class="radio"><input type="radio" name="college"/></div>
+		<div class="radio"><input id="A&S" type="radio" name="college" value="A&S" required=""/></div>
 	</div>
 	<div class="row">
 		<div class="label">College of Business Administration</div>
-		<div class="radio"><input type="radio" name="college" value="College of the Arts"/></div>
+		<div class="radio"><input id="Bus" type="radio" name="college" value="Bus"/></div>
 	</div>
 	<div class="row">
-		<div class="label">College of Communication & Information</div>
-		<div class="radio"><input type="radio" name="college" value="College of Communication & Information" /></div>
+		<div class="label">College of Technology</div>
+		<div class="radio"><input id="Tech" type="radio" name="college" value="Tech"/></div>
 	</div>
 	<div class="row">
-		<div class="label">School of Digital Sciences</div>
-		<div class="radio"><input type="radio" name="college" value="School of Digital Sciences" /></div>
-	</div>
-	<div class="row">
-		<div class="label">College of Education, Health & Human Services</div>
-		<div class="radio"><input type="radio" name="college" value="College of Education, Health & Human Services" /></div>
-	</div>
-	<div class="row">
-		<div class="label">College of Nursing</div>
-		<div class="radio"><input type="radio" name="college" value="College of Nursing" /></div>
-	</div>
-	<div class="row">
-		<div class="label">College of Public Health</div>
-		<div class="radio"><input type="radio" name="college" value="College of Public Health" /></div>
-	</div>
-	<div class="row">
-		<div class="label">College of Podiatric Medicine</div>
-		<div class="radio"><input type="radio" name="college" value="College of Podiatric Medicine" /></div>
-	</div>
-	<div class="row">
-		<div class="label">Regional College</div>
-		<div class="radio"><input type="radio" name="college" value="Regional College" /></div>
-	</div>
-	<div class="row">
-		<div class="label">University Libraries</div>
-		<div class="radio"><input type="radio" name="college" value="University Libraries" /></div>
+		<div class="label">College of Appl Eng, Sustainability & Technology</div>
+		<div class="radio"><input id="AEST" type="radio" name="college" value="AEST"/></div>
 	</div>
 </div>
 	
 <input class="button" type="submit" name="submit" value="Next"/>
 
 </form>
+
+<script type="text/javascript">
+var college = "<?php echo $college; ?>";
+var element = document.getElementById(college);
+element.setAttribute("checked", "");
+</script>
