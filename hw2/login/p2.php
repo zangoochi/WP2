@@ -61,15 +61,15 @@ We need to know how to contact you and a little bit about you.
 <div class="table">
 	<div class="row">
 		<div class="label">Tenured</div>
-		<div class="radio"><input type="radio" name="status" value="TT/T" required=""/></div>
+		<div class="radio"><input id="TT/T" type="radio" name="status" value="TT/T" required=""/></div>
 	</div>
 	<div class="row">
 		<div class="label">Tenure Track/ Not Yet Tenured</div>
-		<div class="radio"><input type="radio" name="status" value="TT/NYT"/></div>
+		<div class="radio"><input id="TT/NYT" type="radio" name="status" value="TT/NYT"/></div>
 	</div>
 	<div class="row">
 		<div class="label">Non Tenure Track</div>
-		<div class="radio"><input type="radio" name="status" value="NTT"/></div>
+		<div class="radio"><input id="NTT" type="radio" name="status" value="NTT"/></div>
 	</div>
 </div>
 
@@ -84,15 +84,15 @@ We need to know how to contact you and a little bit about you.
 <div class="table">
 	<div class="row">
 		<div class="label">Geauga</div>
-		<div class="radio"><input type="radio" name="campus" value="G" required=""/></div>
+		<div class="radio"><input id="G" type="radio" name="campus" value="G" required=""/></div>
 	</div>
 	<div class="row">
 		<div class="label">Kent</div>
-		<div class="radio"><input type="radio" name="campus" value="K"/></div>
+		<div class="radio"><input id="K" type="radio" name="campus" value="K"/></div>
 	</div>
 	<div class="row">
 		<div class="label">Stark</div>
-		<div class="radio"><input type="radio" name="campus" value="St"/></div>
+		<div class="radio"><input id="St" type="radio" name="campus" value="St"/></div>
 	</div>
 </div>
 
@@ -102,35 +102,35 @@ We need to know how to contact you and a little bit about you.
 <div class="table">
 	<div class="row">
 		<div class="label">Computer Science</div>
-		<div class="radio"><input type="radio" name="dept" value="Computer Sci" required=""/></div>
+		<div class="radio"><input id="Computer Sci" type="radio" name="dept" value="Computer Sci" required=""/></div>
 	</div>
 	<div class="row">
 		<div class="label">English</div>
-		<div class="radio"><input type="radio" name="dept" value="English"/></div>
+		<div class="radio"><input id="English" type="radio" name="dept" value="English"/></div>
 	</div>
 	<div class="row">
 		<div class="label">Geography</div>
-		<div class="radio"><input type="radio" name="dept" value="Geography"/></div>
+		<div class="radio"><input id="Geography" type="radio" name="dept" value="Geography"/></div>
 	</div>
 	<div class="row">
 		<div class="label">History</div>
-		<div class="radio"><input type="radio" name="dept" value="History"/></div>
+		<div class="radio"><input id="History" type="radio" name="dept" value="History"/></div>
 	</div>
 	<div class="row">
 		<div class="label">Justice Studies</div>
-		<div class="radio"><input type="radio" name="dept" value="Justice Studies"/></div>
+		<div class="radio"><input id="Justice Studies" type="radio" name="dept" value="Justice Studies"/></div>
 	</div>
 	<div class="row">
 		<div class="label">Economics</div>
-		<div class="radio"><input type="radio" name="dept" value="Economics"/></div>
+		<div class="radio"><input id="Economics" type="radio" name="dept" value="Economics"/></div>
 	</div>
 	<div class="row">
 		<div class="label">Management and Information Systems</div>
-		<div class="radio"><input type="radio" name="dept" value="MIS"/></div>
+		<div class="radio"><input id="MIS" type="radio" name="dept" value="MIS"/></div>
 	</div>
 	<div class="row">
 		<div class="label">Marketing & Entrepreneurship</div>
-		<div class="radio"><input type="radio" name="dept" value="Marketing"/></div>
+		<div class="radio"><input id="Marketing" type="radio" name="dept" value="Marketing"/></div>
 	</div>
 </div>
 
@@ -139,14 +139,24 @@ We need to know how to contact you and a little bit about you.
 </form>
 
 <script type="text/javascript">
-document.getElementById("last_name").value = "<?php echo $faculty->last_name; ?>";
-document.getElementById("first_name").value = "<?php echo $faculty->first_name; ?>";
-document.getElementById("middle_init").value = "<?php echo $faculty->middle_init; ?>";
-document.getElementById("kemail").value = "<?php echo $faculty->kemail; ?>";
-document.getElementById("kemail").setAttribute("disabled", ""); 
-document.getElementById("other_email").value = "<?php echo $faculty->email; ?>";
-document.getElementById("phone").value = "<?php echo $faculty->phone; ?>";
-document.getElementById("<?php echo $faculty->rank; ?>").setAttribute("checked", "");
 
+var updating = "<?php echo isset($faculty) ?>";
+
+if(updating)
+{
+	document.getElementById("last_name").value = "<?php echo $faculty->last_name; ?>";
+	document.getElementById("first_name").value = "<?php echo $faculty->first_name; ?>";
+	document.getElementById("middle_init").value = "<?php echo $faculty->middle_init; ?>";
+	document.getElementById("kemail").value = "<?php echo $faculty->kemail; ?>";
+	document.getElementById("kemail").setAttribute("disabled", ""); 
+	document.getElementById("other_email").value = "<?php echo $faculty->email; ?>";
+	document.getElementById("phone").value = "<?php echo $faculty->phone; ?>";
+	document.getElementById("<?php echo $faculty->rank; ?>").setAttribute("checked", "");
+	document.getElementById("<?php echo $faculty->status; ?>").setAttribute("checked", "");
+	document.getElementById("years").value = "<?php echo $faculty->years; ?>";
+	document.getElementById("<?php echo $faculty->campus; ?>").setAttribute("checked", "");
+	document.getElementById("<?php echo $faculty->dept; ?>").setAttribute("checked", "");
+
+}
 
 </script>
